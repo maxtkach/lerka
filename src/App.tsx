@@ -178,27 +178,27 @@ function App() {
 
         {/* --- ЭКРАН 1: ВВЕДЕНИЕ --- */}
         {currentScreen === 'INTRO' && (
-          <div className="flex-1 w-full flex flex-col justify-center items-center gap-10 animate-slide-up relative z-10">
+          <div className="flex-1 w-full flex flex-col justify-center items-center gap-5 animate-slide-up relative z-10">
             {/* Романтическое пульсирующее сердечко с сиянием */}
-            <div className="relative w-28 h-28">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-romantic-pink via-romantic-rose to-sunset-coral opacity-40 blur-2xl animate-pulse-glow" />
-              <div className="relative w-28 h-28 bg-gradient-to-br from-white/80 to-romantic-pink/60 rounded-full flex justify-center items-center shadow-[0_10px_40px_rgba(255,143,163,0.4)] border-4 border-white/70 animate-heart-beat backdrop-blur-sm">
-                <Heart className="w-14 h-14 text-romantic-rose fill-romantic-rose drop-shadow-lg" />
+            <div className="relative w-20 h-20">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-romantic-pink via-romantic-rose to-sunset-coral opacity-40 blur-xl animate-pulse-glow" />
+              <div className="relative w-20 h-20 bg-gradient-to-br from-white/90 to-romantic-pink/50 rounded-full flex justify-center items-center shadow-[0_8px_25px_rgba(255,143,163,0.3)] border-3 border-white/80 animate-heart-beat backdrop-blur-sm">
+                <Heart className="w-10 h-10 text-romantic-rose fill-romantic-rose drop-shadow-md" />
               </div>
             </div>
 
-            <div className="space-y-5 px-2">
-              <h1 className="text-3xl font-bold leading-snug font-sans tracking-wide drop-shadow-sm">
+            <div className="space-y-3 px-2">
+              <h1 className="text-2xl font-bold leading-snug font-sans tracking-wide drop-shadow-sm">
                 <span className="bg-gradient-to-r from-romantic-rose via-romantic-pink to-sunset-coral bg-clip-text text-transparent">
                   ЛЕРКААА!
                 </span>{' '}
                 <span>👋</span>
               </h1>
-              <p className="text-lg font-semibold text-slate-700/90 leading-relaxed max-w-[280px] mx-auto drop-shadow-sm">
+              <p className="text-sm font-semibold text-slate-700/95 leading-relaxed max-w-[260px] mx-auto drop-shadow-sm">
                 У меня есть одно очень важное предложение...
               </p>
-              <div className="bg-gradient-to-br from-white/80 to-romantic-pink/20 backdrop-blur-md p-6 rounded-[28px] border-2 border-white/90 shadow-[0_15px_40px_rgba(255,143,163,0.2)] mt-4">
-                <h2 className="text-2xl font-bold leading-relaxed drop-shadow-sm">
+              <div className="bg-gradient-to-br from-white/80 to-romantic-pink/20 backdrop-blur-md p-4 rounded-[22px] border border-white/95 shadow-[0_8px_25px_rgba(255,143,163,0.15)] mt-2.5">
+                <h2 className="text-xl font-bold leading-relaxed drop-shadow-sm">
                   <span className="bg-gradient-to-r from-romantic-rose to-sunset-coral bg-clip-text text-transparent">
                     Поехали на море вместе?
                   </span>{' '}
@@ -208,19 +208,19 @@ function App() {
             </div>
 
             {/* Блок с кнопками */}
-            <div className="w-full flex flex-col gap-5 mt-6 min-h-[140px]">
+            <div className="w-full flex flex-col gap-3.5 mt-4 min-h-[110px]">
               <button
                 onClick={() => {
                   triggerLoveConfetti();
                   setCurrentScreen('CHOOSE_DATE');
                 }}
-                className="w-full py-5 bg-gradient-to-r from-romantic-rose via-romantic-pink to-sunset-coral text-white rounded-full font-bold text-xl shadow-[0_15px_35px_rgba(255,143,163,0.4)] hover:shadow-[0_20px_45px_rgba(255,143,163,0.5)] hover:scale-[1.03] active:scale-97 transition-all duration-500 border-2 border-white/40 cursor-pointer backdrop-blur-sm"
+                className="w-full py-3.5 bg-gradient-to-r from-romantic-rose via-romantic-pink to-sunset-coral text-white rounded-full font-bold text-lg shadow-[0_8px_20px_rgba(255,143,163,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-white/40 cursor-pointer backdrop-blur-sm"
               >
                 Да! 🥰
               </button>
 
               <RunawayButton
-                className="w-full py-5 bg-white/95 text-romantic-rose rounded-full font-bold text-xl shadow-[0_8px_25px_rgba(255,182,193,0.25)] border-2 border-romantic-pink/30 hover:bg-romantic-pink/20 hover:scale-[1.03] active:scale-97 transition-all duration-500 backdrop-blur-sm"
+                className="w-full py-3.5 bg-white/95 text-romantic-rose rounded-full font-bold text-lg shadow-[0_4px_12px_rgba(255,182,193,0.15)] border border-romantic-pink/20 hover:bg-romantic-pink/10 hover:scale-[1.02] active:scale-95 transition-all duration-300 backdrop-blur-sm"
               >
                 Нет 🥺
               </RunawayButton>
@@ -549,12 +549,12 @@ function App() {
                 Ответ успешно отправлен
               </h2>
               <p className="text-sm text-slate-600 bg-white/70 px-5 py-2.5 rounded-full inline-block border-2 border-white/90 font-bold shadow-sm backdrop-blur-sm">
-                Теперь отступать уже поздно 😎
+                Теперь заднюю давать нельзя
               </p>
             </div>
 
             <p className="text-base text-slate-600 max-w-[280px] leading-relaxed pt-2 bg-gradient-to-br from-white/80 to-ocean-light/30 px-5 py-4 rounded-[24px] border-2 border-white/80 shadow-[0_6px_20px_rgba(135,206,235,0.15)] backdrop-blur-sm">
-              Я получил твою весточку на свой радар. Готовь купальник, очки и солнечное настроение(сама ты солнечная)! ☀️👙🕶️
+              Я получил твою весточку на свой радар. Готовь купальник, очки и солнечное настроение(хотя ты и так солнечная)! ☀️👙🕶️
             </p>
           </div>
         )}
